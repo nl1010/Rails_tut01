@@ -17,11 +17,9 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id]) #我们调用 Article.find 方法查找想查看的文章，传入的参数 params[:id] 会从请求中获取 :id 参数。我们还把文章对象存储在一个实例变量中（以 @ 开头的变量），只有这样，变量才能在视图中使用。
 	end
 
-	def index 
-		@articles = Article.all
+	def index  
+		@articles = Article.all #index action will extract Article table's all information and store into @articles
 	end
-	
-
 
 
 
